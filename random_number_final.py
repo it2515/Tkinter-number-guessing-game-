@@ -25,8 +25,7 @@ def Set ():
     x = e.get()# Gets entry text.
     y = random.randint(1,int(x))# generates random number based on the value of x
     e.delete(0, END)# Deletes whats in the entry box.
-   
-   
+  
     label_result.config(text='Pick a number from 1 - '+ str(x))
     
   # This  function will is what compares the random number and he number you guess  
