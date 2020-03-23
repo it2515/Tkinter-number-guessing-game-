@@ -2,7 +2,7 @@
 """
 This program is a random number generating game for tkinter.
 The goal of this game is to guess a random number from 1 to a number of your chooseing.
-This is my first ideration of this game I hope you injoy.
+This is my first ideration of this game I hope you enjoy.
 @author: Chris Thummel
 """
 
@@ -51,7 +51,7 @@ def check ():
 label_result = Label(root,  text ='Pick a number you would \n like to guess to.', bg = 'white',font=fontStyle )
 label_result.pack()
 
-#These are the buttons in the  game each button is linked to a function
+#These are the buttons in the  game each button is linked to a function.
 button_set = Button(root, text = 'Set', bg = 'blue', fg = 'yellow', padx=12, pady=2, font=fontStyle, command = Set).pack(side='right')
 button_check = Button(root, text = 'Check', bg = 'yellow', fg= 'blue',font=fontStyle, command = check).pack(side = 'left')
 
