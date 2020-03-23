@@ -35,7 +35,7 @@ def check ():
     x = e.get()# This is what is calling for the text input.
     c = int(x)#converts entry input into an int.
     
-    # checks to see if c and the random number are same.
+    # Checks to see if c and the random number are same.
     if c == y:
         label_result.config(text='You Got it!')
     elif c > y:
@@ -45,15 +45,15 @@ def check ():
     else:
         label_result.config(text='Something went wrong.')
 
-# This is the lable box this puts the text on the screen.
+# This is the label box this puts the text on the screen.
 label_result = Label(root,  text ='Pick a number you would \n like to guess to.', bg = 'white',font=fontStyle )
 label_result.pack()
 
-#these are the buttons in the  game each button is linked to a function
+#These are the buttons in the  game each button is linked to a function
 button_set = Button(root, text = 'Set', bg = 'blue', fg = 'yellow', padx=12, pady=2, font=fontStyle, command = Set).pack(side='right')
 button_check = Button(root, text = 'Check', bg = 'yellow', fg= 'blue',font=fontStyle, command = check).pack(side = 'left')
 
-#this is the entry box this is where you write down your guess and what not
+#This is the entry box this is where you write down your guess and number that you guess to.
 e = Entry(root, width = 7, bg = "white", borderwidth=2)
 e.pack()
 
