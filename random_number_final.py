@@ -17,6 +17,7 @@ root.geometry("200x100")
 root.configure(bg='white')
 fontStyle = tkFont.Font(family="times", size=10)
 
+
 # This function allowes you to set the number you want to guess to
 def Set ():
     global y 
@@ -27,6 +28,7 @@ def Set ():
     e.delete(0, END)# Deletes whats in the entry box.
   
     label_result.config(text='Pick a number from 1 - '+ str(x))
+    
     
   # This  function will is what compares the random number and he number you guess  
 def check ():
@@ -43,6 +45,7 @@ def check ():
         label_result.config(text='You need to guess \n a larger number.')
     else:
         label_result.config(text='Something went wrong.')
+        
 
 # This is the label box this puts the text on the screen.
 label_result = Label(root,  text ='Pick a number you would \n like to guess to.', bg = 'white',font=fontStyle )
