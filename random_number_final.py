@@ -39,6 +39,7 @@ def check ():
     # Checks to see if c and the random number are same.
     if c == y:
         label_result.config(text='You Got it!')
+        e.delete(0, END)
     elif c > y:
         label_result.config(text='You need to guess a\nsmaller number.')
     elif c < y:
