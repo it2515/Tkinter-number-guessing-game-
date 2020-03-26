@@ -9,7 +9,7 @@ This is my first ideration of this game I hope you enjoy.
 from tkinter import *
 import random 
 import tkinter.font as tkFont
-
+import threading
 
 root = Tk()
 root.title('Number Game')
@@ -40,6 +40,9 @@ def check ():
     if c == y:
         label_result.config(text='You Got it!')
         e.delete(0, END)
+        timer = threading.Timer(5.0, Restart) 
+        timer.start() 
+        
     elif c > y:
         label_result.config(text='You need to guess a\nsmaller number.')
     elif c < y:
@@ -60,6 +63,8 @@ button_check = Button(root, text = 'Check', bg = 'yellow', fg= 'blue',font=fontS
 e = Entry(root, width = 7, bg = "white", borderwidth=2)
 e.pack()
 
+def Restart():
+    label_result.config(text='Pick a number you would \n like to guess to.')
 
 root.mainloop()
 root.destroy()
